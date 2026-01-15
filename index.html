@@ -28,6 +28,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#press">Press</a></li>
+      <li><a href="#journey">Journey</a></li>
       <li><a href="#">Profile</a></li>
       <li><a href="#">Contact Us</a></li>
     </ul>
@@ -82,65 +83,64 @@ He currently serves as the National Minister of Bajrang Sena Bharat, where he ac
 
   </div>
 </section>
-<section class="gallery-section" id="gallery">
-  <h2 class="gallery-title">Photo Gallery</h2>
-  <p class="gallery-subtitle">Moments of Service & Leadership</p>
 
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="img7.jpg" alt="">
-      <div class="gallery-overlay"><span>Public Meeting</span></div>
-    </div>
+<section class="gallery">
+<h2 class="gallery-title" style="text-decoration: underline; padding-bottom: 50px; ">Our Gallery</h2>
 
-    <div class="gallery-item">
-      <img src="img8.jpg" alt="">
-      <div class="gallery-overlay"><span>Youth Program</span></div>
-    </div>
 
-    <div class="gallery-item">
-      <img src="img10.jpg" alt="">
-      <div class="gallery-overlay"><span>Social Service</span></div>
-    </div>
+<div class="slider">
+<button class="nav prev">❮</button>
 
-    <div class="gallery-item">
-      <img src="img1.jpg" alt="">
-      <div class="gallery-overlay"><span>Organization Meet</span></div>
-    </div>
-     <div class="gallery-item">
-      <img src="img2.jpg" alt="">
-      <div class="gallery-overlay"><span>Organization Meet</span></div>
-    </div>
-     <div class="gallery-item">
-      <img src="img3.jpg" alt="">
-      <div class="gallery-overlay"><span>Organization Meet</span></div>
-    </div>
-     <div class="gallery-item">
-      <img src="img4.jpg" alt="">
-      <div class="gallery-overlay"><span>Organization Meet</span></div>
-    </div>
-     <div class="gallery-item">
-      <img src="img5.jpg" alt="">
-      <div class="gallery-overlay"><span>Organization Meet</span></div>
-    </div>
-     <div class="gallery-item">
-      <img src="img6.jpg" alt="">
-      <div class="gallery-overlay"><span>Organization Meet</span></div>
-    </div>
-     <div class="gallery-item">
-      <img src="img9.jpg" alt="">
-      <div class="gallery-overlay"><span>Organization Meet</span></div>
-    </div>
-     <div class="gallery-item">
-      <img src="img111.jpg" alt="">
-      <div class="gallery-overlay"><span>Organization Meet</span></div>
-    </div> <div class="gallery-item">
-      <img src="img12.jpg" alt="">
-      <div class="gallery-overlay"><span>Organization Meet</span></div>
-    </div>
-     <a href="#" class="read-btn">See More</a>
-  </div>
 
+<div class="slides">
+<img src="img1.jpg" />
+<img src="img2.jpg" />
+<img src="img3.jpg" />
+<img src="img4.jpg" />
+<img src="img12.jpg" />
+<img src="img6.jpg" />
+<img src="img7.jpg" />
+<img src="img8.jpg" />
+<img src="img9.jpg" />
+<img src="img10.jpg" />
+<img src="img111.jpg" />
+
+</div>
+
+
+<button class="nav next">❯</button>
+</div>
 </section>
+
+
+<script>
+const slides = document.querySelector('.slides');
+const images = document.querySelectorAll('.slides img');
+let index = 0;
+
+
+function showSlide(){
+slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+
+document.querySelector('.next').addEventListener('click', () => {
+index = (index + 1) % images.length;
+showSlide();
+});
+
+
+document.querySelector('.prev').addEventListener('click', () => {
+index = (index - 1 + images.length) % images.length;
+showSlide();
+});
+
+
+setInterval(() => {
+index = (index + 1) % images.length;
+showSlide();
+}, 3000);
+</script>
 
 <section id="press" class="gallery-section">
   <h2 class="gallery-title">Press</h2>
@@ -202,6 +202,57 @@ He currently serves as the National Minister of Bajrang Sena Bharat, where he ac
 
 </section>
 
+
+<section class="journey" id="journey">
+<h2 class="journey-title">Our Journey</h2>
+<p class="journey-subtitle">Milestones that shaped our growth</p>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span>2018</span>
+<h3>Foundation Started</h3>
+<p>Our journey began with a clear vision to serve people and create meaningful impact.</p>
+</div>
+</div>
+
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span>2020</span>
+<h3>Community Growth</h3>
+<p>We expanded our reach and built strong relationships with communities.</p>
+</div>
+</div>
+
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span>2022</span>
+<h3>Major Achievements</h3>
+<p>Implemented impactful initiatives that brought positive change.</p>
+</div>
+</div>
+
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<span>2024</span>
+<h3>Future Vision</h3>
+<p>Continuing forward with innovation, integrity, and dedication.</p>
+</div>
+</div>
+
+
+</div>
+</section>
 
 <!-- JS MUST BE HERE -->
 <script>
